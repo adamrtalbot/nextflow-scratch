@@ -1,12 +1,12 @@
 To run:
 
-`nextflow run adamrtalbot -r azure_gpus -profile autoazure`
+`nextflow run adamrtalbot/nextflow-scratch -r azure_gpus -profile autoazure`
 
 Should print container names to console.
 
 You can change the VM SKU with parameters:
 
-`nextflow run adamrtalbot -r azure_gpus -profile autoazure --azure_vm_size Standard_E16ds_v4`
+`nextflow run adamrtalbot/nextflow-scratch -r azure_gpus -profile autoazure --azure_vm_size Standard_E16ds_v4`
 
 It will require environment variables:
 - `AZURE_WORKING_DIRECTORY`
