@@ -1,7 +1,7 @@
 process CONTAINER {
     cpus 1
     memory 1.GB
-    
+
     container { "$container" }
 
     input: 
@@ -12,7 +12,7 @@ process CONTAINER {
 
     """
     echo $container
-    # nvidia-smi
+    nvidia-smi
     """
 }
 
