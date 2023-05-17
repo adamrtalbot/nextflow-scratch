@@ -13,12 +13,14 @@ process CONTAINER {
     """
     echo $container
     nvidia-smi
+    gpustat
     """
 }
 
 workflow {
     Channel.of(
         "docker.io/nanoporetech/dorado:shac9cd8d6dd1076bf0290ef36c7531c83bd1003302",
+        "docker.io/ontresearch/dorado:sha1b00def6c21f62c42ffc6726c4da9d8960c3b7ef",
         "docker.io/nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04",
         "docker.io/nvidia/cuda:12.1.0-runtime-ubuntu18.04",
         "nvcr.io/nvidia/clara/clara-parabricks:4.0.1-1"
